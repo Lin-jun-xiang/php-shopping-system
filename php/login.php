@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="author" content="Jimmy Lin">
         <title>Login</title>
-        <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
         <base target="_self">
     </head>
     <body>
@@ -15,20 +15,20 @@
             <div class="row justify-content-center align-items-center h-100">
                 <div class="card w-25">
                     <div class="card-header text-center" style="background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 100%);">
-                        Shopping
+                        Sign In
                     </div>
                     <div class="card-body">
-                        <form action="" method="">
+                        <form action="../includes/login.inc.php" method="post">
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="email" class="form-control form-control-sm" placeholder="email@example.com">
+                                <input type="email"  name="email" class="form-control form-control-sm" placeholder="email@example.com">
                             </div>
                             <div class="form-group">
                                 <label for="password">Password</label>
-                                <input type="password" class="form-control form-control form-control-sm" placeholder="******">
+                                <input type="password" name="password" class="form-control form-control form-control-sm" placeholder="******">
                             </div>
                             <br/>
-                            <input type="submit" class="btn btn-primary w-100" value="Login">
+                            <input type="submit" name="submit" class="btn btn-primary w-100" value="Login">
                             <br><br/>
                             <a href="register.php" style="text-decoration: none;">Register here</a>
                         </form>

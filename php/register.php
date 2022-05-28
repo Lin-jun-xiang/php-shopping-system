@@ -1,19 +1,3 @@
-<?php
-    $host = "140.123.102.98";
-    $user = "610238007";
-    $password = "610238007";
-    $db = "610238007";
-    $port = "3306";
-    $connect = new mysqli($host, $user, $password, $db, $port);
-    if ($connect->connect_error) {
-        die("Connection Failed: " . $connect -> connect_error);
-    }
-    else {
-        echo "Connected";
-    }
-    $connect -> close();
-?>
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
     <head>
@@ -23,7 +7,7 @@
         <meta name="description" content="">
         <meta name="author" content="Jimmy Lin">
         <title>Register</title>
-        <link rel="stylesheet" href="./bootstrap.min.css">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
         <base target="_self">
     </head>
     <body>
@@ -34,26 +18,26 @@
                             Sign Up
                         </div>
                         <div class="card-body">
-                            <form action="" method="">
+                            <form action="../includes/register.inc.php" method="post">
                                 <div class="form-group">
-                                    <input type="username" class="form-control form-control-sm" placeholder="Username">
+                                    <input type="username" name="username" class="form-control form-control-sm" placeholder="Username">
                                 </div>
                                 <br>
                                 <div class="form-group">
-                                    <input type="email" class="form-control form-control form-control-sm" placeholder="Email">
+                                    <input type="email" name="email" class="form-control form-control form-control-sm" placeholder="Email">
                                 </div>
                                 <br>
                                 <div class="form-group">
-                                    <input type="password" class="form-control form-control form-control-sm" placeholder="Password">
+                                    <input type="password" name="password" class="form-control form-control form-control-sm" placeholder="Password">
                                 </div>
                                 <br>
                                 <div class="form-group">
-                                    <input type="Retype password" class="form-control form-control form-control-sm" placeholder="Retype password">
+                                    <input type="password"  name="rePassword" class="form-control form-control form-control-sm" placeholder="Retype password">
                                 </div>
                                 <br/>
-                                <input type="submit" class="btn btn-primary w-100" value="Register">
+                                <input type="submit" name="submit" class="btn btn-primary w-100" value="Register">
                                 <br><br/>
-                                <a href="Login,html" style="text-decoration: none;">Already have account</a>
+                                <a href="login.php" style="text-decoration: none;">Already have account</a>
                             </form>
                         </div>
                     </div>
